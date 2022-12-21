@@ -264,14 +264,10 @@
                     left:-400px;
                 }
 
-                @media (max-width:700px) {
-                    left:-450px;
+                @media (max-width:510px) {
+                    left:-250px;
                     transform: rotate(80deg);
                     bottom: -50px;
-                }
-
-                @media (max-width:661px) {
-                    left:-250px;
                     
                 }
             }
@@ -299,14 +295,11 @@
                 @media (max-width:1400px) {
                     right:-400px;
                 }
-                @media (max-width:700px) {
-                    right:-450px;
+               
+                @media (max-width:510px) {
+                    right:-250px;
                     transform: rotate(-80deg);
                     bottom: -50px;
-                }
-                @media (max-width:661px) {
-                    right:-250px;
-                    
                 }
             }
         }
