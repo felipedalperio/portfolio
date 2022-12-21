@@ -52,7 +52,8 @@
                 animation-duration: 3s;
                 width: 50%;
                 min-width: 200px;
-                @media (max-width:661px) {
+    
+                @media (max-width:550px) {
                     display: none;
                     
                 }
@@ -255,7 +256,7 @@
                     bottom: -50px;
                 }
 
-                @media (max-width:661px) {
+                @media (max-width:550px) {
                     left:-250px;
                     
                 }
@@ -289,7 +290,8 @@
                     transform: rotate(-80deg);
                     bottom: -50px;
                 }
-                @media (max-width:661px) {
+                
+                @media (max-width:550px) {
                     right:-250px;
                     
                 }
