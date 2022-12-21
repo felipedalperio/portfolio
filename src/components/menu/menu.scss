@@ -9,6 +9,11 @@
     font-family: 'Quicksand', sans-serif;
     z-index: 9999;
 
+    @media (max-width:661px) {
+        width: calc(100% - 60px);
+        height: 60px;
+    }
+
     .left{
         h1{
             position: relative;
