@@ -10,6 +10,11 @@
     display: flex;
     flex-direction: column;
     backdrop-filter: blur(2px);
+    max-height: 900px;
+
+    @media (max-width:661px) {
+        height: 95vh;
+    }
 
     .top{
        flex:2; 
@@ -20,6 +25,11 @@
         position: absolute;
         top:-100px;
         left: -50px;
+        width: 20%;
+        min-width: 100px;
+        @media (max-width:991px) {
+            display: none;
+        }
        
        }
        .meteoro{
@@ -40,16 +50,38 @@
             
             &:first-child{
                 animation-duration: 3s;
+                width: 50%;
+                min-width: 200px;
+                @media (max-width:661px) {
+                    display: none;
+                    
+                }
             }
             &:nth-child(2){
                 right: -40px;
                 top:200px;
+                width: 40%;
+                min-width: 120px;
+
+                @media (max-width:661px) {
+                    right: -80px;
+                    top:250px;
+                    
+                }
                 
             }
             &:last-child{
                 right: -20px;
                 top: -200px;
                 animation-duration: 2.5s;
+                width: 20%;
+                min-width: 60px;
+
+                @media (max-width:661px) {
+                    right: -60px;
+                    top: -150px;
+                    
+                }
             }
         }
        }
@@ -64,14 +96,26 @@
             position: absolute;
             animation: shake 2s infinite linear;
             filter: drop-shadow( 0px 0px 10px rgba(153, 67, 240, 0.7));
-            &:nth-child(2){
+            &:nth-child(1){
                 animation-duration: 2.5s;
+                width: 60%;
+                min-width: 200px;
+                top:-150px;
+                
             }
             &:last-child{
                 top:140px;
                 left: 80px;
                 transform: rotate(-30deg);
                 animation-name: shakeTransform;
+                width: 10%;
+                min-width: 35px;
+
+                @media (max-width:661px) {
+                    top:220px;
+                    left: 0px;
+                    
+                }
             }
         }
        }
@@ -85,6 +129,10 @@
         z-index: 9;
         gap:10px;
 
+        @media (max-width:991px) {
+            flex: 2;
+        }
+
         span{
             text-transform: uppercase;
             color: white;
@@ -96,6 +144,10 @@
                 font-size: 28px;
                 letter-spacing: 3px;
                 text-shadow: 1px 1px 10px white;
+                
+                @media (max-width:991px) {
+                    font-size: 18px;
+                }
             }
 
             &:nth-child(3){
@@ -108,6 +160,10 @@
                     color: #B175FF;
                     text-shadow: 0px 0px 10px #9400FF;
                     font-weight: bold;
+                }
+
+                @media (max-width:991px) {
+                    font-size: 20px;
                 }
             }
         }
@@ -128,6 +184,10 @@
                 color: #B175FF;
                 text-shadow: none;
                 filter: drop-shadow( 0px 0px 10px rgba(153, 67, 240, 0.7));
+                
+                @media (max-width:991px) {
+                    font-size: 60px;
+                }
             }
         }
 
@@ -184,6 +244,21 @@
                 max-width: 800px;
                 animation: innerRight 2s;
                 animation-fill-mode: forwards;
+
+                @media (max-width:1400px) {
+                    left:-400px;
+                }
+
+                @media (max-width:700px) {
+                    left:-450px;
+                    transform: rotate(80deg);
+                    bottom: -50px;
+                }
+
+                @media (max-width:661px) {
+                    left:-250px;
+                    
+                }
             }
             &:nth-child(2){
                 left:0;
@@ -192,6 +267,10 @@
                 z-index: 1;
                 top:50px;
                 animation: rotate 30s infinite linear 2s, innerUp 2s ;
+                @media (max-width:700px) {
+                    width: 400px;
+                    top:100px;
+                }
 
             }
             &:last-child{
@@ -201,6 +280,19 @@
                 max-width: 800px;
                 animation: innerLeft 2s ;
                 animation-fill-mode: forwards;
+                
+                @media (max-width:1400px) {
+                    right:-400px;
+                }
+                @media (max-width:700px) {
+                    right:-450px;
+                    transform: rotate(-80deg);
+                    bottom: -50px;
+                }
+                @media (max-width:661px) {
+                    right:-250px;
+                    
+                }
             }
         }
     }
