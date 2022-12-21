@@ -6,6 +6,7 @@ export default function Header() {
         <div className="top">
             <img className="bubble" src="./images/bubble.gif" alt="" loading="lazy" />
             <img className="meteoro" src="./images/meteoro.webp" alt="" width={100}  loading="lazy"/>
+            <img className="satellite" src="./images/spaceship2.webp" alt="" width={100}  loading="lazy"/>
             <div className="left">
                 <img src="./images/astronauta.png" alt="" width={300} loading="lazy"/>
                 <img src="./images/planet2.webp" alt="" width={100}   loading="lazy"/>

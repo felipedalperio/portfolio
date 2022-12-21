@@ -37,6 +37,21 @@
          transform: rotate(100deg) translateX(-800%) translateY(-800%);
          animation: meteoro 10s infinite linear ;
        }
+
+       .satellite{
+            position: absolute;
+            transform: rotate(-60deg);
+            left: 0;
+            top:10px;
+            transition: all .5s ease;
+            animation: satellite 15s infinite linear, spaceship .8s infinite ;
+
+            @media (max-width:661px) {
+                width: 60px;
+                animation: satellite 26s infinite linear, spaceship .8s infinite ;
+            }
+
+        }
        .left{
         position: relative;
         display: flex;
@@ -340,6 +355,14 @@
         transform: rotate(100deg) translateX(800%) translateY(800%);
     }
 }
+@keyframes satellite {
+    0%{
+     transform: translateX(-200%)  
+    }
+    100%{
+        transform: translateX(1900px) translateY(900px) rotate(360deg);
+    }
+}
 
 @keyframes sky {
     0%{
@@ -409,5 +432,17 @@
     }
     100%{
         border-color: #B175FF;
+    }
+}
+
+@keyframes spaceship {
+    0%{
+        filter: brightness(70%) drop-shadow( 2px 2px 10px rgba(153, 67, 240, 0.7));
+    }
+    50%{
+        filter: brightness(80%) drop-shadow( 2px 2px 20px rgba(139, 240, 67, 0.7));
+    }
+    100%{
+        filter: brightness(70%) drop-shadow( 2px 2px 10px rgba(153, 67, 240, 0.7));
     }
 }
