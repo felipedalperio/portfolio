@@ -37,7 +37,7 @@
             object-fit: contain;
             position: absolute;
             animation: shake 2s infinite linear;
-
+            
             &:first-child{
                 animation-duration: 3s;
             }
