@@ -1,7 +1,7 @@
 .header{
     position: relative;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-image: url("../../../public/images/space.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -43,11 +43,11 @@
             transform: rotate(-60deg);
             left: 0;
             top:10px;
-            transition: all .5s ease;
-            animation: satellite 15s infinite linear, spaceship .8s infinite ;
+            visibility: hidden;
+            width: 60px;
 
             @media (max-width:661px) {
-                width: 60px;
+                visibility: visible;
                 animation: satellite 26s infinite linear, spaceship .8s infinite ;
             }
 
