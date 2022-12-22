@@ -1,42 +1,5 @@
 import './header.scss';
-import React, { useState, useEffect, useRef } from 'react';
 export default function Header() {
-    const [scrollPosition, setScrollPosition] = useState(0);
-    
-    const could1 = useRef(null);
-    const could2 = useRef(null);
-
-    const handleScroll = () => {
-        const position = window.pageYOffset;
-        setScrollPosition(position);
-    };
-
-    function getWindowDimensions() {
-        const { innerWidth: width, innerHeight: height } = window;
-        return {
-          width,
-          height
-        };
-    }
-
-    function getDevice(){
-        let width = getWindowDimensions().width;
-        if(width <= 1400){
-            return 300;
-        }
-        else if (width <= 510){
-            return 250;
-        }
-        return 200;
-    }
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
     return (
         <div className='header'>
             <div className="top">
@@ -65,9 +28,9 @@ export default function Header() {
                 </div>
             </div>
             <div className="bottom">
-                <img src="./images/cloud.webp" alt="" width={800} loading="lazy"  style={{left: `-${getDevice() + scrollPosition/2}px`}}/>
+                <img src="./images/cloud.webp" alt="" width={800} loading="lazy"  />
                 <img src="./images/planet.webp" alt="" width={700} loading="lazy" />
-                <img src="./images/cloud.webp" alt="" width={800} loading="lazy"  style={{right: `-${getDevice() + scrollPosition/2}px`}}/>
+                <img src="./images/cloud.webp" alt="" width={800} loading="lazy" />
             </div>
         </div>
     )
