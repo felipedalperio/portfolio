@@ -23,8 +23,8 @@ export default function Header() {
                     </div>
                 </div>
                 <div className="right">
-                    <img src="./images/planet4.webp" alt="" width={300} height={300}loading="lazy" />
-                    <img src="./images/rocket.webp" alt="" width={50} height={500}loading="lazy" />
+                    <img src="./images/planet4.webp" alt="" width={300} height={300} loading="lazy" />
+                    <img src="./images/rocket.webp" alt="" width={50} height={500} loading="lazy" />
                 </div>
             </div>
             <div className="bottom">

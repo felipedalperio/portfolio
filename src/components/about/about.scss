@@ -3,8 +3,12 @@
     align-items: center;
     justify-content: center;
     padding: 30px 60px;
-    background: linear-gradient(180deg, #f3a5eb 0% 8%,#40389a 15% 20%, #31025d 30% 100%);
+    background: linear-gradient(185deg,#745dae 0% 10%,#1c1c60 20% 30%, #050516 40% 100%);
     font-family: 'Raleway', sans-serif;
+
+    @media (max-width:991px) {
+        flex-direction: column;
+    }
    .left{
         flex: 1;
         display: flex;
@@ -15,21 +19,22 @@
             margin: 0;
             letter-spacing: 2px;
             text-transform: uppercase;
-            background: linear-gradient(90deg, #75ffef 0% 20%,#fef06e 40% 60%, #191919 80% 100%);
+            background: linear-gradient(90deg, #75ffef 0% 20%,#fef06e 40% 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-size: 60px;
+            filter: drop-shadow( 0px 0px 10px rgba(153, 67, 240, 0.7));
         }
         .line{
             height: 6px ;
             width: 60px;
             border-radius: 20px;
             background: linear-gradient(90deg, #75ffef 0% 20%,#fef06e 40% 60%, #ab27f8 90% 100%);
+            filter: drop-shadow( 0px 0px 10px rgba(153, 67, 240, 0.7));
         }
         span{
             font-size: 20px;
             letter-spacing: 2px;
-            text-align: justify;
         }
         .navigation{
             display: flex;
@@ -40,6 +45,7 @@
                 border-radius: 50%;
                 border:2px solid white;
                 background-color: white;
+                cursor: pointer;
             }
 
             .active{
@@ -53,8 +59,11 @@
         align-items: center;
         justify-content: center;
         position: relative;
+        filter: drop-shadow( 0px 0px 6px rgba(153, 67, 240, 0.7));
 
         img{
+            width: 100%;
+            object-fit: contain;
             &:first-child{
                 position: absolute;
                 transform: rotate(-20deg);

@@ -121,15 +121,13 @@
                 
             }
             &:last-child{
-                top:140px;
+                top:0px;
                 left: 80px;
                 transform: rotate(-30deg);
                 animation-name: shakeTransform;
                 width: 10%;
                 min-width: 35px;
-
                 @media (max-width:661px) {
-                    top:220px;
                     left: 0px;
                     
                 }
