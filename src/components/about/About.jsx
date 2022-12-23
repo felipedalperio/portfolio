@@ -14,7 +14,7 @@ export default function About() {
             </div>
         </div>
         <div className="right">
-            <img src="./images/triangle.png" alt="" width={400} height={400} loading="lazy"/>
+            <img src="./images/triangle.webp" alt="" width={400} height={400} loading="lazy"/>
             <img src="./images/astronaut-floating.webp" alt="" width={400} height={400} loading="lazy" />
         </div>
     </div>

@@ -5,9 +5,11 @@
     padding: 30px 60px;
     background: linear-gradient(185deg,#745dae 0% 10%,#1c1c60 20% 30%, #050516 40% 100%);
     font-family: 'Raleway', sans-serif;
+    overflow: hidden;
 
     @media (max-width:991px) {
         flex-direction: column;
+        padding: 30px;
     }
    .left{
         flex: 1;
@@ -24,6 +26,10 @@
             -webkit-text-fill-color: transparent;
             font-size: 60px;
             filter: drop-shadow( 0px 0px 10px rgba(153, 67, 240, 0.7));
+            @media (max-width:661px) {
+                font-size: 45px;
+                 text-align: center;
+            }
         }
         .line{
             height: 6px ;
