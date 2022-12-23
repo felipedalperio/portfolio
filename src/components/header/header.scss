@@ -36,6 +36,7 @@
          position: absolute;
          transform: rotate(100deg) translateX(-800%) translateY(-800%);
          animation: meteoro 10s infinite linear ;
+         object-fit: contain;
        }
 
        .satellite{
@@ -45,6 +46,7 @@
             top:10px;
             visibility: hidden;
             width: 60px;
+            object-fit: contain;
 
             @media (max-width:661px) {
                 visibility: visible;
@@ -251,7 +253,7 @@
             position: absolute;
             z-index: 2; 
             filter: drop-shadow( 2px 2px 10px rgba(153, 67, 240, 0.7)) ;
-
+            bottom: -400px;
             &:first-child{
                 left:-200px;
                 transform: rotate(20deg);
@@ -267,7 +269,6 @@
                 @media (max-width:510px) {
                     left:-250px;
                     transform: rotate(80deg);
-                    bottom: -50px;
                     
                 }
             }
@@ -299,7 +300,6 @@
                 @media (max-width:510px) {
                     right:-250px;
                     transform: rotate(-80deg);
-                    bottom: -50px;
                 }
             }
         }

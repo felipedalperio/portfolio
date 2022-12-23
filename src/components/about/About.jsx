@@ -6,7 +6,7 @@ export default function About() {
         <div className="left">
             <h1>Sobre mim</h1>
             <div className="line"></div>
-            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate facere dolorum, ut quas voluptas illum necessitatibus! Obcaecati dignissimos dolore dolorum aut dicta nihil veniam nostrum repellendus odit. Nulla, neque porro!</span>
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate facere dolorum, ut quas voluptas illum necessitatibus! Obcaecati dignissimos dolore dolorum aut dicta nihil veniam nostrum repellendus odit. Nulla, neque porro.</span>
             <div className="navigation">
                 <div className="ball active"></div>
                 <div className="ball"></div>
@@ -14,8 +14,8 @@ export default function About() {
             </div>
         </div>
         <div className="right">
-            <img src="./images/triangle.png" alt="" width={400}/>
-            <img src="./images/astronaut-floating.webp" alt="" width={400} />
+            <img src="./images/triangle.png" alt="" width={400} height={400} loading="lazy"/>
+            <img src="./images/astronaut-floating.webp" alt="" width={400} height={400} loading="lazy" />
         </div>
     </div>
   )
