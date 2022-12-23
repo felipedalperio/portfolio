@@ -12,7 +12,7 @@
         padding: 30px;
     }
    .left{
-        flex: 1;
+        flex: 1.2;
         display: flex;
         flex-direction: column;
         gap:20px;
@@ -41,6 +41,7 @@
         span{
             font-size: 20px;
             letter-spacing: 2px;
+            text-align: justify;
         }
         .navigation{
             display: flex;
@@ -78,7 +79,6 @@
             }
             &:first-child{
                 position: absolute;
-                transform: rotate(-20deg);
             }  
             
             &:last-child{
