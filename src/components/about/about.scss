@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px 60px;
+    padding: 100px 60px 0px 60px;
     background: linear-gradient(185deg,#745dae 0% 10%,#1c1c60 20% 30%, #050516 40% 100%);
     font-family: 'Raleway', sans-serif;
     overflow: hidden;
@@ -45,6 +45,8 @@
         .navigation{
             display: flex;
             gap:20px;
+            align-items: center;
+            justify-content: center;
             .ball{
                 width: 10px;
                 height: 10px;
@@ -70,6 +72,10 @@
         img{
             width: 100%;
             object-fit: contain;
+
+            @media (max-width:661px) {
+                width: 80%;
+            }
             &:first-child{
                 position: absolute;
                 transform: rotate(-20deg);
