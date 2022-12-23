@@ -8,7 +8,7 @@ export default function Header() {
                 <img className="satellite" src="./images/spaceship2.webp" alt="" width={100} height={100}loading="lazy" />
                 <div className="left">
                     <img src="./images/astronauta.webp" alt="" width={300} height={300}loading="lazy" />
-                    <img src="./images/planet2.webp" alt="" width={100} height={100}loading="lazy" />
+                    <img src="./images/planet2.webp" alt="" width={100} height={150}loading="lazy" />
                     <img src="./images/planet3.webp" alt="" width={200} height={100}loading="lazy" />
                 </div>
                 <div className="center">
@@ -24,7 +24,7 @@ export default function Header() {
                 </div>
                 <div className="right">
                     <img src="./images/planet4.webp" alt="" width={380} height={200} loading="lazy" />
-                    <img src="./images/rocket.webp" alt="" width={50} height={500} loading="lazy" />
+                    <img src="./images/rocket.webp" alt="" width={50} height={100} loading="lazy" />
                 </div>
             </div>
             <div className="bottom">

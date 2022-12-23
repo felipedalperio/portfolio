@@ -6,10 +6,10 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    object-fit: contain;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    backdrop-filter: blur(2px);
     max-height: 900px;
 
     @media (max-width:661px) {
@@ -61,9 +61,11 @@
         justify-content: center;
         img{
             filter: drop-shadow( 2px 2px 10px rgba(153, 67, 240, 0.7));
-            object-fit: contain;
             position: absolute;
             animation: shake 2s infinite linear;
+            @media (max-width:661px) {
+                object-fit: contain;  
+            }
             
             &:first-child{
                 animation-duration: 3s;
@@ -109,10 +111,14 @@
         align-items: center;
         justify-content: center;
         img{
-            object-fit: contain;
             position: absolute;
             animation: shake 2s infinite linear;
             filter: drop-shadow( 0px 0px 10px rgba(153, 67, 240, 0.7));
+
+            @media (max-width:661px) {
+                object-fit: contain;  
+            }
+            
             &:nth-child(1){
                 animation-duration: 2.5s;
                 width: 60%;
@@ -121,11 +127,10 @@
                 
             }
             &:last-child{
-                top:0px;
+                top:150px;
                 left: 80px;
                 transform: rotate(-30deg);
                 animation-name: shakeTransform;
-                width: 10%;
                 min-width: 35px;
                 @media (max-width:661px) {
                     left: 0px;
