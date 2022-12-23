@@ -218,17 +218,12 @@
                 cursor: pointer;
                 letter-spacing: 2px;
                 font-weight: bold;
-                box-shadow: 2px 2px 10px #9400FF ;
-                transition: all .5s ease ;
+                box-shadow: 2px 2px 10px #1c1c60 ;
+                transition: all .2s ease ;
 
-                &:hover{
-                    transform: scale(1.2);
-                    border-top-left-radius: 10px;
-                    border-bottom-right-radius: 10px;
-                }
 
                 &:first-child{
-                    background-color: #9400FF;
+                    background: linear-gradient(90deg,#1c1c60,#9400FF,#1c1c60);
                 }
 
                 &:last-child{
