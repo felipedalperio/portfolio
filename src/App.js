@@ -1,4 +1,5 @@
 import About from "./components/about/About";
+import Post from "./components/post/Post";
 import Home from "./pages/home/Home";
 
 
@@ -7,6 +8,7 @@ function App() {
     <div>
       <Home/>
       <About/>
+      <Post/>
     </div>
   );
 }

@@ -3,45 +3,59 @@
     align-items: center;
     justify-content: center;
     padding: 100px 60px 0px 60px;
-    background: linear-gradient(185deg,#745dae 0% 10%,#1c1c60 20% 30%, #050516 40% 100%);
+    background: linear-gradient(185deg,#1c1c60 0% 10%,#0d0d3d 15% 20%, #050516 30% 100%);
     font-family: 'Raleway', sans-serif;
     overflow: hidden;
 
     @media (max-width:991px) {
         flex-direction: column;
         padding: 30px;
+        background: linear-gradient(185deg,#1c1c60 0% 5%, #050516 10% 100%);
     }
    .left{
         flex: 1.2;
         display: flex;
-        flex-direction: column;
-        gap:20px;
-        color: white;
+        overflow: hidden;
+
+        .wrapper{
+            display: flex;
+            flex-direction: column; 
+            transition: transform .5s ease;
+            gap:20px;
+            color: white;
+            min-width: 100%;
+            @media (max-width:991px) {
+                min-width: 90vw;
+            }
+            padding: 20px;
+        }
         h1{
             margin: 0;
             letter-spacing: 2px;
             text-transform: uppercase;
-            background: linear-gradient(90deg, #75ffef 0% 20%,#fef06e 40% 100%);
+            white-space: nowrap;
+            background: linear-gradient(270deg,#13ADC7 0%,#945DD6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-size: 60px;
-            filter: drop-shadow( 0px 0px 10px rgba(153, 67, 240, 0.7));
+            filter: drop-shadow( 1px 1px 4px #521ec0);
             @media (max-width:661px) {
                 font-size: 45px;
-                 text-align: center;
+            
             }
         }
         .line{
             height: 6px ;
-            width: 60px;
+            width:60px;
             border-radius: 20px;
-            background: linear-gradient(90deg, #75ffef 0% 20%,#fef06e 40% 60%, #ab27f8 90% 100%);
-            filter: drop-shadow( 0px 0px 10px rgba(153, 67, 240, 0.7));
+            background: linear-gradient(270deg,#13ADC7 0%,#945DD6 100%);
+            filter: drop-shadow( 1px 1px 4px #9a26ff);
+            
         }
         span{
             font-size: 20px;
             letter-spacing: 2px;
-            text-align: justify;
+            text-align:unset
         }
         .navigation{
             display: flex;
