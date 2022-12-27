@@ -1,0 +1,98 @@
+.technologies{
+    color: #b0afaf;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px;
+    gap:20px;
+    .title{
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        .line{
+            height: 6px;
+            width: 60px;
+            border-radius: 20px;
+            background: linear-gradient(270deg,#13ADC7 0%,#945DD6 100%);
+            
+        }
+        h1{
+            font-size: 60px;
+            margin: 0;
+            color: #B175FF;
+            text-shadow: none;
+            background: linear-gradient(90deg,#4e4ef5,#9400FF,#4e4ef5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow( 1px 1px 4px #030376);
+        }
+    }
+    > span{
+        font-size: 20px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+    }
+    .tech{
+        display: flex;
+        margin-top: 20px;
+        justify-content: center;
+        padding: 0px 20px;
+        text-align: center;
+
+        @media (max-width:991px) {
+            padding: 20px;
+            flex-direction: column;
+            gap:20px;
+        }
+
+        h3{
+            font-size: 30px;
+            margin: 0;
+            text-shadow: none;
+            background: linear-gradient(90deg,#13ADC7,#9400FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        span{
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        .left{
+            flex:1;
+        }
+        .center{
+            flex:1;
+            position: relative;
+
+            &::before{
+                content: '';
+                position: absolute;
+                height: 40px;
+                width: 4px;
+                border-radius: 30px;
+                background: linear-gradient(180deg,#13ADC7,#9400FF);
+                right: 0;
+                top:0;
+                bottom: 0;
+                margin: auto;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                height: 40px;
+                width:4px;
+                border-radius: 30px;
+                background: linear-gradient(180deg,#13ADC7,#9400FF);
+                left: 0;
+                top:0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+        .right{
+            flex:1;
+        }
+
+        
+    }
+}

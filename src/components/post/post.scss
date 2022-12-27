@@ -35,7 +35,7 @@
          display: flex;
          color: white;
          flex-direction: column;
-
+         transition: all 2s ease-in;
 
          img{
              width: 100%;
@@ -117,11 +117,8 @@
          }
 
         }
-
            
        }
        
-    
-    
       
 }
