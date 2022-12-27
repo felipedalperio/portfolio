@@ -6,7 +6,12 @@ export default function About() {
 
   const slide = useRef(null);
   const wrapper = useRef(null);
+  const imageAstro = useRef(null);
+  const imageback = useRef(null);
+  const right = useRef(null);
   const[ball, setBall] = useState(['active', 0, 0])
+  const[backImg, setBackImg] = useState("./images/triangle.webp")
+  const[astronaut, setAtronaut] = useState("./images/astronaut-floating3.png")
   
   const changePosition = ( scrollPosition) => {
     slide.current.scrollLeft = scrollPosition
@@ -35,8 +40,30 @@ const handleScroll = () => {
     scrollBall = [0, 0, 'active'];
   }
 
+  //right.current.style.animation = "right 1s linear";
   setBall(scrollBall)
+  
 }
+
+
+useEffect(() => {
+  imageAstro.current.style.animation = 'astro 5s linear infinite';
+  imageback.current.style.animation = 'rotateMoon 10s linear infinite'
+  if(ball[0] == 'active'){
+    setAtronaut("./images/astronaut-floating3.png");
+    setBackImg("./images/triangle.webp");
+  }
+  else if(ball[1] == 'active'){
+    setAtronaut("./images/astronaut-flag.png");
+    setBackImg("./images/planetback.png");
+  }
+  else{
+    setAtronaut("./images/astronaut-floating5.webp");
+    setBackImg("./images/circulo.png");
+  }
+  
+},[ball])
+
 
 
 
@@ -58,9 +85,9 @@ const handleScroll = () => {
                 <div className={"ball " + ball[2]} onClick={() => changePosition( wrapper.current.offsetWidth * 2)} ></div>
             </div>
         </div>
-        <div className="right">
-            <img src="./images/triangle.webp" alt="" width={400} height={400} loading="lazy"/>
-            <img src="./images/astrounaut-coffe.webp" alt="" width={300} height={300} loading="lazy" />
+        <div className="right" ref={right}>
+            <img src={backImg} alt="" width={400} height={400} loading="lazy" ref={imageback}/>
+            <img src={astronaut} alt="" width={300} height={300} loading="lazy" ref={imageAstro} />
         </div>
     </div>
   )

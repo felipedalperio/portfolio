@@ -16,3 +16,25 @@ code {
 html {
   scroll-behavior: smooth;
 }
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #050516;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg,#13ADC7 0%,#945DD6 100%);
+  border-radius: 40px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg,#057083 0%,#5f23a8 100%);
+}

@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     gap:40px;
-    padding: 100px 60px 40px 60px;
+    padding: 100px 60px;
     background: linear-gradient(185deg,#1c1c60 0% 10%,#0d0d3d 15% 20%, #050516 30% 100%);
     font-family: 'Raleway', sans-serif;
     overflow: hidden;
@@ -116,10 +116,12 @@
             object-fit: contain;
 
             @media (max-width:661px) {
-                width: 80%;
+                width: 90%;
             }
             &:first-child{
                 position: absolute;
+                max-width: 450px;
+                min-width: 300px
             }  
             
             &:last-child{
@@ -128,4 +130,63 @@
         }
 
    }
+
+   @keyframes astro {
+        0%{
+            transform: translateY(0%) rotate(2deg);
+        }
+        50%{
+            transform: translateY(10%) rotate(-2deg);
+        }
+        100%{
+            transform: translateY(0%) rotate(2deg);
+        }
+   }
+
+   @keyframes astro2 {
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(1.1);
+            filter:brightness(2);
+            
+        }
+        100%{
+            transform: scale(1);
+        }
+   }
+
+   @keyframes rotateMoon {
+    0%{
+        transform: rotate(0deg);
+    }
+    40%{
+        filter: blur(0px);
+    }
+    50%{
+        filter: blur(10px);
+    }
+    60%{
+        filter: blur(0px);
+    }
+    100%{
+        transform: rotate(360deg);
+    }    
+}
+   @keyframes right {
+    0%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    50%{
+        opacity: 0;
+        transform: translateX(200%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }    
+}
+  
 }
