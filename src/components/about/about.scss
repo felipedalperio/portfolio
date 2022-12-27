@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 100px 60px 0px 60px;
+    gap:40px;
+    padding: 100px 60px 40px 60px;
     background: linear-gradient(185deg,#1c1c60 0% 10%,#0d0d3d 15% 20%, #050516 30% 100%);
     font-family: 'Raleway', sans-serif;
     overflow: hidden;
@@ -15,20 +16,45 @@
    .left{
         flex: 1.2;
         display: flex;
+        flex-direction: column;
         overflow: hidden;
-
-        .wrapper{
+        align-items: center;
+        justify-content: center;
+        
+        .content{
             display: flex;
-            flex-direction: column; 
-            transition: transform .5s ease;
-            gap:20px;
-            color: white;
-            min-width: 100%;
-            @media (max-width:991px) {
-                min-width: 90vw;
-            }
+            overflow-x: scroll;
             padding: 20px;
+            width: 100%;
+            gap:30px;
+            cursor:grab;
+            scroll-snap-type: x mandatory;
+            scroll-padding: 24px;
+            scroll-behavior: smooth;
+
+
+            &::-webkit-scrollbar{
+                display: none;
+            }
+
+            @media (max-width:991px) {
+               width: 90vw;
+            }
+
+            .wrapper{
+                display: flex;
+                flex: 0 0 100%;
+                flex-direction: column; 
+                transition: transform .5s ease;
+                gap:20px;
+                color: white;
+                width: 100%;
+                scroll-snap-align: start;
+                
+            }
+
         }
+
         h1{
             margin: 0;
             letter-spacing: 2px;
@@ -62,6 +88,7 @@
             gap:20px;
             align-items: center;
             justify-content: center;
+            z-index: 99;
             .ball{
                 width: 10px;
                 height: 10px;
