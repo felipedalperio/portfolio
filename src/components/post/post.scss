@@ -87,7 +87,7 @@
                 color: #d8bbfb;
              }
 
-             button {
+             a {
                 margin-top: 10px;
                 align-items: center;
                 align-self: center;
@@ -110,9 +110,12 @@
                 touch-action: manipulation;
                 white-space: nowrap;
                 cursor: pointer;
-                transition: all .3s;
+                transition: all .5s ease;
 
-                    
+
+                &:hover{
+                  transform: scale(1.1);
+                }
                }
          }
 

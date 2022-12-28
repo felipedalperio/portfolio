@@ -18,7 +18,9 @@ export default function Post() {
                           <span>{item}</span>
                         ))}
                     </div>
-                    <button><span>{item.button}</span></button>
+                    <a href={item.source}>
+                      <span>{item.button}</span>
+                    </a>
                 </div>
               </div>
           </div>
