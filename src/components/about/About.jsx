@@ -58,7 +58,7 @@ useEffect(() => {
     setBackImg("./images/planetback.png");
   }
   else{
-    setAtronaut("./images/astronaut-floating5.webp");
+    setAtronaut("./images/astronaut-book.webp");
     setBackImg("./images/circulo.png");
   }
   
