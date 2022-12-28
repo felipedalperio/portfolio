@@ -1,8 +1,7 @@
 import './header.scss';
 export default function Header() {
-    //<img className="bubble" src="./images/bubble.gif" alt="" loading="lazy"/>
     return (
-        <div className='header'>
+        <div className='header' id="header">
             <div className="top">
                 <img className="meteoro" src="./images/meteoro.webp" alt="" width={100} height={100} loading="lazy" />
                 <img className="satellite" src="./images/spaceship2.webp" alt="" width={100} height={100}loading="lazy" />

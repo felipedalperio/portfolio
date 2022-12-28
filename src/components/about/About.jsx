@@ -68,7 +68,7 @@ useEffect(() => {
 
 
   return (
-    <div className='about'>
+    <div className='about'  id="about">
         <div className="left">
             <div className="content" ref={slide}>
               {aboutme.map((item,key) => (

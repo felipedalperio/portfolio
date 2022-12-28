@@ -4,7 +4,7 @@ import { FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <div className='footer'>
+    <div className='footer' id="footer">
             <div className="top">
                 <div className="item">
                     <h6>NUMERO</h6>
