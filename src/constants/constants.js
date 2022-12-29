@@ -133,7 +133,7 @@ export const projects = [
   {
     title: 'Blog',
     description: "Um Blog simples que contem um CRUD e Autenticação de usuário.",
-    image: './images/imagem12.png',
+    image: './images/imagem13.png',
     tags: ['Node.js','React.js','MongoDB'],
     source: 'https://github.com/felipedalperio',
     visit: 'https://github.com/felipedalperio',

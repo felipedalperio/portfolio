@@ -1,228 +1,207 @@
-.header{
+.header {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: url("../../../public/images/space.webp");
+    background-image: url("../../../public/images/espaco.png");
     background-attachment: fixed;
-    background-position: center;
-    object-fit: contain;
+    background-size: cover;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     max-height: 900px;
+    
 
     @media (max-width:661px) {
         height: 95vh;
+        flex-direction: column-reverse;
     }
 
-    .top{
-       flex:2; 
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       .bubble{
+    .meteoro {
         position: absolute;
-        top:-100px;
-        left: -50px;
-        width: 20%;
-        min-width: 100px;
-        @media (max-width:991px) {
-            display: none;
-        }
-       
-       }
-       .meteoro{
-         position: absolute;
-         transform: rotate(100deg) translateX(-800%) translateY(-800%);
-         animation: meteoro 10s infinite linear ;
-         object-fit: contain;
-       }
+        top:0;
+        right: 0;
+        animation: meteoro 6s infinite linear;
+        rotate: -170deg;
+        object-fit: contain;
+    }
 
-       .satellite{
-            position: absolute;
-            transform: rotate(-60deg);
-            left: 0;
-            top:10px;
-            visibility: hidden;
-            width: 60px;
-            object-fit: contain;
+    .starshoot{
+        position: absolute;
+        rotate: -30deg;
+        left:0;
+        transform: translateX(-100%) translateY(-100%);
+        animation: starshoot 10s infinite linear 4s;
+    }
 
-            @media (max-width:661px) {
-                visibility: visible;
-                animation: satellite 26s infinite linear, spaceship .8s infinite ;
-            }
+    .satellite {
+        position: absolute;
+        transform: rotate(-60deg);
+        left: 0;
+        top: 10px;
+        width: 60px;
+        object-fit: contain;
+        animation: satellite 26s infinite linear, spaceship .8s infinite;
 
-        }
-       .left{
+    }
+
+    .left {
         position: relative;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        img{
-            filter: drop-shadow( 2px 2px 10px rgba(153, 67, 240, 0.7));
-            position: absolute;
-            animation: shake 2s infinite linear;
-            object-fit: contain;
-            
-            &:first-child{
-                animation-duration: 3s;
-                width: 50%;
-                min-width: 200px;
-                @media (max-width:661px) {
-                    display: none;
-                    
-                }
-            }
-            &:nth-child(2){
-                right: -40px;
-                top:200px;
-                width: 40%;
-                min-width: 120px;
-
-                @media (max-width:661px) {
-                    right: -80px;
-                    top:250px;
-                    
-                }
-                
-            }
-            &:last-child{
-                right: -20px;
-                top: -200px;
-                animation-duration: 2.5s;
-                width: 20%;
-                min-width: 60px;
-
-                @media (max-width:661px) {
-                    right: -60px;
-                    top: -150px;
-                    
-                }
-            }
-        }
-       }
-       .right{
         flex: 1;
-        position: relative;
-        display: flex;
         align-items: center;
         justify-content: center;
-        img{
-            position: absolute;
-            animation: shake 2s infinite linear;
-            filter: drop-shadow( 0px 0px 10px rgba(153, 67, 240, 0.7));
+        animation: innerLeft 1s linear;
+        
+        @media (max-width:661px) {
+            height: 60%;
+            align-items: flex-end;
+            justify-content: start;
+        }
 
-            @media (max-width:991px) {
-                object-fit: contain;  
-            }
-            &:nth-child(1){
-                animation-duration: 2.5s;
-                width: 60%;
-                min-width: 200px;
-                top:-150px;
+        img {
+            &:first-child {
+                animation: shake 8s infinite linear;
+                z-index: 1;
+                filter: drop-shadow(2px 2px 10px rgba(153, 67, 240, 0.7));
+                width: 100%;
+                object-fit: contain;
 
-                @media (max-width:991px) {
-                  top:-200px;
-                }
-                
-            }
-            &:last-child{
-                top:150px;
-                left: 80px;
-                transform: rotate(-30deg);
-                animation-name: shakeTransform;
-                min-width: 35px;
                 @media (max-width:661px) {
-                    left: 0px;
-                    
+                    width: 80%;
                 }
+            }
+
+            &:last-child {
+                position: absolute;
+                top: 55%;
+                bottom: 50%;
+                margin: auto;
+                animation: rotate 20s infinite linear;
+                filter: drop-shadow(10px 10px 10px rgba(248, 253, 172, 0.7));
+
+                @media (max-width:1200px) {
+                    height: 500px;
+                    width: 500px;
+                }
+
+                @media (max-width:661px) {
+                    height: 200px;
+                    width: 200px;
+                }
+        
+                @media (max-width:991px) {
+                    height: 400px;
+                    width: 400px;
+                }
+
             }
         }
-       }
-       .center{
+    }
+
+    .right {
         flex: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: end;
+        justify-content: center;
         font-family: 'Space Grotesk', sans-serif;
-        height: 70%;
+        height: max-content;
         z-index: 9;
-        gap:10px;
+        gap: 10px;
+        height: 100%;
+        animation: innerRight 1s linear;
 
-        @media (max-width:991px) {
-            flex: 2;
+        @media (max-width:661px) {
+            height: max-content;
+            justify-content: flex-end;
+            position: relative;
+            top:20px;
         }
 
-        span{
+        
+        span {
             text-transform: uppercase;
             color: white;
-    
             text-align: center;
 
             &:first-child {
                 font-weight: 500;
-                font-size: 28px;
+                font-size: 38px;
                 letter-spacing: 3px;
                 text-shadow: 1px 1px 10px white;
                 
+                @media (max-width:661px) {
+                    text-shadow: 0px 0px 4px #1c1c60;
+                }
+
                 @media (max-width:991px) {
                     font-size: 18px;
                 }
             }
 
-            &:nth-child(3){
+            &:nth-child(3) {
                 font-size: 30px;
                 letter-spacing: 3px;
                 text-shadow: 1px 1px 10px white;
 
-                span{
-                  
-                    text-shadow:none;
+                @media (max-width:661px) {
+                    text-shadow: 0px 0px 4px #1c1c60;
+                }
+
+                span {
+
+                    text-shadow: none;
                     font-weight: bold;
-                    background: linear-gradient(90deg,#4e4ef5,#9400FF);
+                    background: linear-gradient(90deg, #4e4ef5, #9400FF);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
-                    filter: drop-shadow( 1px 1px 10px #6848b8) ;
+                    filter: drop-shadow(1px 1px 10px #6848b8);
                 }
 
                 @media (max-width:991px) {
                     font-size: 20px;
                 }
             }
+
         }
 
-        .name{
+        .name {
             max-width: max-content;
             overflow: hidden;
             white-space: nowrap;
             border-right: 3px solid #B175FF;
             padding-right: 10px;
-            font-family: 'Quicksand', sans-serif;
+            font-family: 'Raleway', sans-serif;
             animation: typing 3s steps(20) infinite alternate,
-            blink  0.7s infinite;
-            span{
+                blink 0.7s infinite;
+            span {
                 width: max-content;
-                font-size: 80px;
-                font-weight: 800;
+                font-size: 100px;
+                font-weight: 700;
                 letter-spacing: 2px;
                 color: #B175FF;
                 text-shadow: none;
-                background: linear-gradient(90deg,#4e4ef5,#9400FF,#4e4ef5);
+                background: linear-gradient(90deg, #4e4ef5, #9400FF, #4e4ef5);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                
+
                 @media (max-width:991px) {
                     font-size: 60px;
+                }
+                @media (max-width:661px) {
+                    background: linear-gradient(90deg, #4e4ef5, #9400FF);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
             }
         }
 
-        .groupButton{
+        .groupButton {
             display: flex;
-            gap:20px;
+            gap: 20px;
             margin-top: 20px;
-            button{
+
+            button {
                 width: 140px;
                 padding: 10px 0;
                 color: #DEDCE4;
@@ -230,223 +209,181 @@
                 cursor: pointer;
                 letter-spacing: 2px;
                 font-weight: bold;
-                box-shadow: 2px 2px 10px #1c1c60 ;
-                transition: all .2s ease ;
+                box-shadow: 2px 2px 10px #1c1c60;
+                transition: all .2s ease;
 
-                &:hover{
+                &:hover {
                     transform: scale(1.1);
                 }
 
 
-                &:first-child{
-                    background: linear-gradient(90deg,#1c1c60,#9400FF,#1c1c60);
+                &:first-child {
+                    background: linear-gradient(90deg, #1c1c60, #9400FF, #1c1c60);
                 }
 
-                &:last-child{
+                &:last-child {
                     background-color: #191919;
                 }
             }
         }
+
         
-       }
-       .left{
-        flex: 1;
-       }
-    }
-    .bottom{
-        display: flex;
-        flex:1; 
-        position: relative;
-        img{
-            object-fit: contain;
-            position: absolute;
-            z-index: 2; 
-            filter: drop-shadow( 2px 2px 10px rgba(153, 67, 240, 0.7)) ;
-            bottom: -400px;
-            &:first-child{
-                left:-200px;
-                transform: rotate(20deg);
-                width: 100%;
-                max-width: 800px;
-                animation: innerRight 2s;
-                animation-fill-mode: forwards;
-
-                @media (max-width:1400px) {
-                    left:-400px;
-                }
-
-                @media (max-width:510px) {
-                    bottom: -380px;
-                    left:-250px;
-                    transform: rotate(80deg);
-                    
-                }
-            }
-            &:nth-child(2){
-                left:0;
-                right: 0;
-                margin: auto;
-                z-index: 1;
-                top:50px;
-                animation: rotate 30s infinite linear 2s, innerUp 2s ;
-                @media (max-width:700px) {
-                    width: 400px;
-                    top:10px;
-                }
-
-            }
-            &:last-child{
-                right:-200px;
-                transform: rotate(-20deg);
-                width: 100%;
-                max-width: 800px;
-                animation: innerLeft 2s ;
-                animation-fill-mode: forwards;
-                
-                @media (max-width:1400px) {
-                    right:-400px;
-                }
-               
-                @media (max-width:510px) {
-                    bottom: -380px;
-                    right:-250px;
-                    transform: rotate(-80deg);
-                }
-            }
-        }
     }
 }
 
+
 @keyframes shake {
-    0%{
-        transform: translateY(0%) ;
+    0% {
+        transform: translateY(0%);
     }
-    50%{
+
+    50% {
         transform: translateY(10%);
     }
-    100%{
+
+    100% {
         transform: translateY(0%);
     }
 }
+
 @keyframes shakeTransform {
-    0%{
+    0% {
         transform: translateY(0%) rotate(-30deg);
     }
-    50%{
+
+    50% {
         transform: translateY(10%) rotate(-30deg);
     }
-    100%{
+
+    100% {
         transform: translateY(0%) rotate(-30deg);
     }
 }
 
 @keyframes rotate {
-    0%{
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }
+
 @keyframes meteoro {
-    0%{
-        transform: rotate(100deg) translateX(-800%) translateY(-800%);
+    0% {
+        transform: translateX(-100%) translateY(-100%);
     }
-    20%{
-        transform: rotate(100deg) translateX(800%) translateY(800%);
+    20% {
+       transform: translateX(800%) translateY(-1200%);
     }
-    100%{
-        transform: rotate(100deg) translateX(800%) translateY(800%);
+
+    100% {
+       transform: translateX(800%) translateY(-1200%);
     }
 }
-@keyframes satellite {
-    0%{
-     transform: translateX(-200%)  
+@keyframes starshoot {
+    0% {
+        transform: translateX(-100%) translateY(-100%);
     }
-    100%{
+    10% {
+        transform: translateX(1200%) translateY(1200%);
+    }
+
+    100% {
+        transform: translateX(1200%) translateY(1200%);
+    }
+}
+
+@keyframes satellite {
+    0% {
+        transform: translateX(-200%)
+    }
+
+    100% {
         transform: translateX(1900px) translateY(900px) rotate(360deg);
     }
 }
 
-@keyframes sky {
-    0%{
-        background-position: start;
-    }
-    100%{
-        background-position: end;
-    }
-}
-
 @keyframes innerRight {
-    0%{
-        opacity: 0;
-        transform: translateX(-100%) rotate(20deg);
+    0% {
+        transform: translateX(-100%);
     }
-    70%{
-        transform: translateX(5%) rotate(20deg);
+
+    70% {
+        transform: translateX(5%);
     }
-    100%{
-        opacity: 0.8;
-        transform: translateX(0%) rotate(20deg);
-    }
-}
-@keyframes innerLeft{
-    0%{
-        opacity: 0;
-        transform: translateX(100%) rotate(-20deg);
-    }
-    70%{
-        transform: translateX(-5%) rotate(-20deg);
-    }
-    100%{
-        opacity: 0.8;
-        transform: translateX(0%) rotate(-20deg);
+
+    100% {
+        transform: translateX(0%);
     }
 }
 
-@keyframes innerUp{
-    0%{
+@keyframes innerLeft {
+    0% {
+        transform: translateX(100%);
+    }
+
+    70% {
+        transform: translateX(-5%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes innerUp {
+    0% {
         opacity: 0;
         transform: translateY(100%);
     }
-    80%{
+
+    80% {
         transform: translateY(-4%);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0%);
     }
 }
 
 @keyframes typing {
-    0%{
+    0% {
         width: 0%;
         visibility: hidden;
     }
-    50%{
+
+    50% {
         width: 100%;
     }
-    100%{
+
+    100% {
         width: 100%;
     }
 }
+
 @keyframes blink {
-    50%{
+    50% {
         border-color: transparent;
     }
-    100%{
+
+    100% {
         border-color: #B175FF;
     }
 }
 
 @keyframes spaceship {
-    0%{
-        filter: brightness(70%) drop-shadow( 2px 2px 10px rgba(153, 67, 240, 0.7));
+    0% {
+        filter: brightness(70%) drop-shadow(2px 2px 10px rgba(153, 67, 240, 0.7));
     }
-    50%{
-        filter: brightness(80%) drop-shadow( 2px 2px 20px rgba(139, 240, 67, 0.7));
+
+    50% {
+        filter: brightness(80%) drop-shadow(2px 2px 20px rgba(139, 240, 67, 0.7));
     }
-    100%{
-        filter: brightness(70%) drop-shadow( 2px 2px 10px rgba(153, 67, 240, 0.7));
+
+    100% {
+        filter: brightness(70%) drop-shadow(2px 2px 10px rgba(153, 67, 240, 0.7));
     }
 }
