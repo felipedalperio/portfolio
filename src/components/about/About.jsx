@@ -11,7 +11,7 @@ export default function About() {
   const right = useRef(null);
   const[ball, setBall] = useState(['active', 0, 0])
   const[backImg, setBackImg] = useState("./images/triangle.webp")
-  const[astronaut, setAtronaut] = useState("./images/astronaut-floating3.png")
+  const[astronaut, setAtronaut] = useState("./images/astronaut-floating3.webp")
   
   const changePosition = ( scrollPosition) => {
     slide.current.scrollLeft = scrollPosition
@@ -50,16 +50,16 @@ useEffect(() => {
   imageAstro.current.style.animation = 'astro 5s linear infinite';
   imageback.current.style.animation = 'rotateMoon 10s linear infinite'
   if(ball[0] == 'active'){
-    setAtronaut("./images/astronaut-floating3.png");
+    setAtronaut("./images/astronaut-floating3.webp");
     setBackImg("./images/triangle.webp");
   }
   else if(ball[1] == 'active'){
-    setAtronaut("./images/astronaut-flag.png");
-    setBackImg("./images/planetback.png");
+    setAtronaut("./images/astronaut-flag.webp");
+    setBackImg("./images/planetback.webp");
   }
   else{
     setAtronaut("./images/astronaut-book.webp");
-    setBackImg("./images/circulo.png");
+    setBackImg("./images/circulo.webp");
   }
   
 },[ball])

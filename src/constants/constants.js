@@ -2,7 +2,7 @@ export const projects = [
   {
     title: 'Meu Blog',
     description: "Esse blog foi realizado em React.js (front-end) e Node.js(Back-end), O projeto possui um Crud completo, autenticação de usuário e mundança de tema (Dark - Light). ",
-    image: './images/blog.png',
+    image: './images/blog.webp',
     tags: ['React.js','MongoDb', 'Node.js', 'Redux', 'Styled-components'],
     source: 'https://lacodev.netlify.app',
     visit: 'https://lacodev.netlify.app',
@@ -12,7 +12,7 @@ export const projects = [
   {
     title: 'Anote',
     description: "Anote é um aplicativo 3 em 1 (Metas, Rotinas e Bloco de notas). O projeto foi construido utilizando a linguagem nativa do Android (Java).",
-    image: './images/anote.png',
+    image: './images/anote.webp',
     tags: ['Java','SQlite'],
     source: 'https://play.google.com/store/apps/details?id=com.eren.trinuss',
     visit: 'https://play.google.com/store/apps/details?id=com.eren.trinuss',
@@ -22,7 +22,7 @@ export const projects = [
   {
     title: 'WhatsApp Clone',
     description: "Aplicativo para android feito em java com o objetivo de ser semelhante ao WhatsApp verdadeiro. O projeto não contém todos os recursos do WhatsApp, apenas os principais.",
-    image: './images/whatsApp.jpg',
+    image: './images/whatsApp.webp',
     tags: ['Java','firebase'],
     source: 'https://github.com/felipedalperio/WhatsAppClone',
     visit: 'https://github.com/felipedalperio/WhatsAppClone',
@@ -32,7 +32,7 @@ export const projects = [
   {
     title: 'WhatsApp Web Clone',
     description: "Projeto Web para trocação de mensagens entre usuários. A autenticação é feita com o facebook ou Google utilizando o firebase.",
-    image: './images/whatsAppWeb.png',
+    image: './images/whatsAppWeb.webp',
     tags: ['Java','firebase'],
     source: 'https://github.com/felipedalperio/WhatsAppReact',
     visit: 'https://github.com/felipedalperio/WhatsAppReact',
@@ -52,7 +52,7 @@ export const projects = [
   {
     title: 'Flappy Bird Clone',
     description: "Jogo ( android ) com o objetivo de ter as mesmas características do game Flappy Bird, o projeto foi realizado utilizando a biblioteca libGDX.",
-      image: './images/image3.jpg',
+      image: './images/image3.webp',
       tags: ['Java','firebase'],
     source: 'https://github.com/felipedalperio/Flappy-bird-clone',
     visit: 'https://github.com/felipedalperio/Flappy-bird-clone',
@@ -62,7 +62,7 @@ export const projects = [
   {
     title: 'Template Animado',
     description: "Template divertido realizado apenas com HTML & CSS onde aborda animações de keyframes.",
-    image: './images/alien.png',
+    image: './images/alien.webp',
     tags: ['HTML','CSS'],
     source: 'https://github.com/felipedalperio/Template-Alien',
     visit: 'https://github.com/felipedalperio/Template-Alien',
@@ -82,7 +82,7 @@ export const projects = [
   {
     title: 'Confeitaria',
     description: "O WebSite Omagine é uma confeitaria de Bolachas e Cookies.",
-    image: './images/image11.png',
+    image: './images/image11.webp',
     tags: ['JavaScript','React.js'],
     source: 'https://omaginebolachas.github.io/loja/',
     visit: 'https://omaginebolachas.github.io/loja/',
@@ -92,7 +92,7 @@ export const projects = [
   {
     title: 'Olx Clone',
     description: "Projeto mobile (Android) com o intuito de parecer o verdadeiro OLX, o aplicativo contém sistemas de postagem e pesquisa com filtro de região.",
-    image: './images/olx.jpg',
+    image: './images/olx.webp',
     tags: ['Java','firebase'],
     source: 'https://github.com/felipedalperio/olx_clone',
     visit: 'https://github.com/felipedalperio/olx_clone',
@@ -103,7 +103,7 @@ export const projects = [
   {
     title: 'Porta da sorte',
     description: "Um jogo para testar a sua sorte, onde quem joga deve tentar encontrar a porta premiada por eliminação. Podendo selecionar os níveis de dificuldade, através da movimentação do prêmio e a alteração do número de portas.",
-    image: './images/image9.jpg',
+    image: './images/image9.webp',
     tags: ['JavaScript','React.js','Next.js'],
     source: 'https://github.com/felipedalperio/porta-premiada',
     visit: 'https://github.com/felipedalperio/porta-premiada',
@@ -113,7 +113,7 @@ export const projects = [
   {
     title: 'Quiz',
     description: "Questionário de perguntas e respostas com um contador (timer) para dispositivos android.",
-    image: './images/image4.jpg',
+    image: './images/image4.webp',
     tags: ['Java','firebase'],
     source: 'https://github.com/felipedalperio/QuizzApplication',
     visit: 'https://github.com/felipedalperio/QuizzApplication',
@@ -133,7 +133,7 @@ export const projects = [
   {
     title: 'Blog',
     description: "Um Blog simples que contem um CRUD e Autenticação de usuário.",
-    image: './images/imagem13.png',
+    image: './images/imagem13.webp',
     tags: ['Node.js','React.js','MongoDB'],
     source: 'https://github.com/felipedalperio',
     visit: 'https://github.com/felipedalperio',
