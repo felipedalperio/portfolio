@@ -29,7 +29,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <img src="./images/moon.png" alt="" width={300} height={300} />
+            <img src="./images/moon.webp" alt="" width={300} height={300} />
     </div>
   )
 }
