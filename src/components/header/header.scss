@@ -20,6 +20,7 @@
         position: absolute;
         top:0;
         right: 0;
+        transform: translateX(-100%) translateY(-100%);
         animation: meteoro 6s infinite linear 1s;
         rotate: -170deg;
         object-fit: contain;
