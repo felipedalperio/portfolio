@@ -20,7 +20,7 @@
         position: absolute;
         top:0;
         right: 0;
-        transform: translateX(-100%) translateY(-100%);
+        transform: translateX(-120%) translateY(-120%);
         animation: meteoro 6s infinite linear 1s;
         rotate: -170deg;
         object-fit: contain;
@@ -55,7 +55,7 @@
         
         @media (max-width:661px) {
             height: 60%;
-            align-items: flex-end;
+            //align-items: flex-end;
             justify-content: start;
             animation-name: innerRight;
         }
