@@ -6,7 +6,7 @@ export default function Header() {
             <img className="starshoot" src="./images/star.webp" alt="" width={100} height={100} loading="lazy" />
             <img className="satellite" src="./images/spaceship.webp" alt="" width={100} height={100} loading="lazy" />
             <div className="left">
-                <img src="./images/astronauta.png" alt="" width={500} height={500} loading="lazy" />
+                <img src="./images/astronauta.webp" alt="" width={500} height={500} loading="lazy" />
                 <img src="./images/moonyellow2.webp" alt="" width={700} height={700} loading="lazy" />
             </div>
             <div className="right">
