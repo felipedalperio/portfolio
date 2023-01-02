@@ -1,6 +1,6 @@
 import './menu.scss';
 import { FiGithub } from 'react-icons/fi';
-import { FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { useRef, useEffect } from 'react';
 
 export default function Menu() {
@@ -21,6 +21,7 @@ export default function Menu() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
   return (
     <div className='menu' ref={menu}>
         <div className="left">
@@ -28,22 +29,28 @@ export default function Menu() {
         </div>
         <div className="center">
             <ul>
-                <li> <a href="#header"> home </a> </li>
+                <li> <a href="#header" > home </a> </li>
                 <li> <a href="#about"> about</a> </li>
                 <li> <a href="https://lacodev.netlify.app">blog</a></li>
                 <li> <a href="#footer">contact</a></li>
             </ul>
         </div>
         <div className="right">
-            <div className="circle">
-                <FiGithub />
-            </div>
+            <a href="https://github.com/felipedalperio">
+                <div className="circle">
+                    <FiGithub />
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/felipe-dalperio-3b569521a/">
             <div className="circle">
                 <FaLinkedinIn />
             </div>
+            </a>
+            <a href="https://www.facebook.com/felipe.kd.16/">
             <div className="circle">
-                <FaYoutube />
+                <FaFacebook />
             </div>
+            </a>
         </div>
     </div>
   )

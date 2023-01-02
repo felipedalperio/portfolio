@@ -85,6 +85,8 @@
         .icons{
             display: flex;
             gap: 30px;
+            cursor: pointer;
+
             .circle{
                 width: 40px;
                 height: 40px;
@@ -93,7 +95,14 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                transition: scale .3s ease;
+                text-decoration: none;
+                color: white;
+                &:hover{
+                    scale: 1.2;
+                }
             }
+
         }
     }
 }

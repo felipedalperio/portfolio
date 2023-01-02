@@ -16,8 +16,12 @@ export default function Header() {
                     </div>
                     <span>WELCOME TO MY <span>PORTFOLIO</span></span>
                     <div className="groupButton">
-                        <button>MY BLOG</button>
-                        <button>CURRICULUM</button>
+                        <a  href='https://lacodev.netlify.app'>
+                            <button>MY BLOG</button>
+                        </a>
+                        <a  href='./images/Felipe-Dalperio.pdf' download>
+                            <button>CURRICULUM</button>
+                        </a>
                     </div>
             </div>
         </div>
