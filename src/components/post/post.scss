@@ -13,7 +13,7 @@
     .card {
         --background: linear-gradient(to left, #13ADC7 0%, #945DD6 100%);
         width: 430px;
-        height: 650px;
+        height: 550px;
         padding: 5px;
         border-radius: 1rem;
         overflow: visible;
@@ -22,6 +22,10 @@
         position: relative;
         z-index: 1;
         font-family: 'Space Grotesk', sans-serif;
+
+        @media (max-width:661px) {
+         height: max-content
+        }
 
         .card-info {
          --color: #050516;;
@@ -61,6 +65,7 @@
                 text-align: center;
                 letter-spacing: 2px;
                 color: #bebebe;
+                
              }
     
              .line{
