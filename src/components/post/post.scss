@@ -41,10 +41,12 @@
          flex-direction: column;
          transition: all 2s ease-in;
 
+
          img{
-             width: 100%;
-             min-height: 30%;
-             object-fit: cover;
+            width: 100%;
+            min-height: 30vh;
+            object-fit: cover;
+            filter:saturate(1.4)
              
          }
 
