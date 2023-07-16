@@ -299,11 +299,11 @@
         transform: translateX(-100%) translateY(-100%);
     }
     10% {
-        transform: translateX(1200%) translateY(1200%);
+        transform: translateX(100vw) translateY(100vw);
     }
 
     100% {
-        transform: translateX(1200%) translateY(1200%);
+        transform: translateX(100vw) translateY(100vw);
     }
 }
 

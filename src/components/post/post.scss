@@ -46,7 +46,8 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            min-height: 30vh;
+            min-height: 200px;
+            max-height: 300px;
             background-size: contain ;
             background-position: center center;
             @media (max-width:661px) {
